@@ -3,5 +3,7 @@
     <pages>
         <page name='1.反转链表'/>
         <page name='2.最长公共前缀'/>
+        <page name='3.最长连续数组'/>
+        <page name='4.设计LRU缓存结构'/>
     </pages>
 </playground>
