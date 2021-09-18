@@ -6,5 +6,7 @@
         <page name='3.最长连续数组'/>
         <page name='4.设计LRU缓存结构'/>
         <page name='5.实现二叉树的前序、中序、后序遍历'/>
+        <page name='6.子数组的最大累计和'/>
+        <page name='7.单链表的排序'/>
     </pages>
 </playground>
