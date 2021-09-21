@@ -1,4 +1,3 @@
-//: [Previous](@previous)
 
 import Foundation
 
@@ -37,8 +36,6 @@ public class ListNode {
 
 public class Solution {
   
-   
-    
     /// 方法一： 递归
     func Merge1 ( _ pHead1: ListNode?,  _ pHead2: ListNode?) -> ListNode? {
         if (pHead1 == nil) { return pHead2 }

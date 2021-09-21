@@ -9,5 +9,6 @@
         <page name='6.子数组的最大累计和'/>
         <page name='7.单链表的排序'/>
         <page name='8.合并两个排序的链表'/>
+        <page name='9.快速排序'/>
     </pages>
 </playground>
