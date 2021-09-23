@@ -102,7 +102,7 @@ print("方法1： 递归 输出：\(string)")
 
 // test 方法2
 nextNode = Solution().reverseList2(createList())
- string = ""
+string = ""
 while nextNode != nil {
     string.append("\(nextNode!.val)->")
     nextNode = nextNode?.next

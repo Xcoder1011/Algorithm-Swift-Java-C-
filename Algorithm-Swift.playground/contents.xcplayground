@@ -10,5 +10,6 @@
         <page name='7.单链表的排序'/>
         <page name='8.合并两个排序的链表'/>
         <page name='9.快速排序'/>
+        <page name='10.链表中倒数第k个节点'/>
     </pages>
 </playground>
