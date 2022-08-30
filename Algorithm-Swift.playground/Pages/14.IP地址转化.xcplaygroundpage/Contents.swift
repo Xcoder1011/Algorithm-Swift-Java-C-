@@ -46,7 +46,17 @@ public class Solution {
         var i = 0
         for c in str.reversed() {
             if let num = Int("\(c)") {
-                let p = Int(truncating: pow(2, i) as NSNumber)
+                var p = 1
+                if (i == 0) {
+                    p = 1
+                } else {
+                    var index = 0
+                    while index < i {
+                        p = 2 * p
+                        index += 1
+                    }
+                }
+                // let p = Int(truncating: pow(2, i) as NSNumber)
                 sum += (num * p)
             }
             i+=1
