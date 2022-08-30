@@ -15,5 +15,6 @@
         <page name='12.字符变换'/>
         <page name='13.求和计算'/>
         <page name='14.IP地址转化'/>
+        <page name='15.验证IP地址'/>
     </pages>
 </playground>
