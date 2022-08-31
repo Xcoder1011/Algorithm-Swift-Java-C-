@@ -16,5 +16,6 @@
         <page name='13.求和计算'/>
         <page name='14.IP地址转化'/>
         <page name='15.验证IP地址'/>
+        <page name='16.最大子数组和'/>
     </pages>
 </playground>
