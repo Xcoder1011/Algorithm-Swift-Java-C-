@@ -1,6 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
 
 /*
  15.验证IP地址
@@ -82,24 +79,39 @@ public class Solution {
         }
         return "Neither"
     }
+    
+    func maxProfit(_ prices: [Int]) -> Int {
+        var maxProfit = 0
+        var minPrice = Int.max
+        for price in prices {
+            minPrice  = min(minPrice, price)
+            maxProfit = max(maxProfit, price - minPrice)
+        }
+        return maxProfit
+    }
 }
 
+
 let solution = Solution()
-var result = solution.validIPAddress("172.16.254.1")
+//var result = solution.validIPAddress("172.16.254.1")
+//print("result is \(result)")
+//
+//
+//result = solution.validIPAddress(":2001:0db8:85a3:0:0:8A2E:0370:7334:")
+//print("result is \(result)")
+//
+//
+//result = solution.validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334")
+//print("result is \(result)")
+//
+//
+//result = solution.validIPAddress("256.256.256.256")
+//print("result is \(result)")
+
+
+
+var result = solution.maxProfit([7,1,5,3,6,4])
 print("result is \(result)")
-
-
-result = solution.validIPAddress(":2001:0db8:85a3:0:0:8A2E:0370:7334:")
-print("result is \(result)")
-
-
-result = solution.validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334")
-print("result is \(result)")
-
-
-result = solution.validIPAddress("256.256.256.256")
-print("result is \(result)")
-
 
 
 

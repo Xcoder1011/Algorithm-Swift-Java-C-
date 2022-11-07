@@ -1,6 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
 /*
  18.用两个栈实现队列
  
@@ -67,10 +64,3 @@ class CQueue {
         return stack2.removeLast()
     }
 }
-
-/**
- * Your CQueue object will be instantiated and called as such:
- * let obj = CQueue()
- * obj.appendTail(value)
- * let ret_2: Int = obj.deleteHead()
- */

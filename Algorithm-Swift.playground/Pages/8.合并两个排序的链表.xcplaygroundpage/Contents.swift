@@ -1,7 +1,3 @@
-
-import Foundation
-
-
 /*
  
  8.合并两个排序的链表
@@ -38,10 +34,10 @@ public class Solution {
   
     /// 方法一： 递归
     func Merge1 ( _ pHead1: ListNode?,  _ pHead2: ListNode?) -> ListNode? {
-        if (pHead1 == nil) { return pHead2 }
-        if (pHead2 == nil) { return pHead1 }
+        if pHead1 == nil  { return pHead2 }
+        if pHead2 == nil { return pHead1 }
 
-        if (pHead1!.val < pHead2!.val) {
+        if pHead1!.val < pHead2!.val {
             pHead1?.next = Merge1(pHead1!.next, pHead2)
             return pHead1
         } else {
@@ -54,8 +50,8 @@ public class Solution {
     /// 时间复杂度为O(n)
     
     func Merge2 ( _ p1: ListNode?,  _ p2: ListNode?) -> ListNode? {
-        if (p1 == nil) { return p2 }
-        if (p2 == nil) { return p1 }
+        if p1 == nil { return p2 }
+        if p2 == nil { return p1 }
        
         var pHead1 = p1
         var pHead2 = p2
@@ -63,7 +59,7 @@ public class Solution {
         let head = ListNode(0)
         var cur: ListNode = head
         // 使用while循环，遍历pHead1和pHead2
-        while (pHead1 != nil && pHead2 != nil) {
+        while pHead1 != nil && pHead2 != nil {
             if pHead1!.val < pHead2!.val {
                 // 把pHead1添加到heade中， 并移动pHead1
                 cur.next = pHead1!

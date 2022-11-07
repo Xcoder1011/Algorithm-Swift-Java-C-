@@ -1,18 +1,19 @@
 
 /* 1. 反转链表
  
-题目描述:
-输入一个链表，反转链表后，输出新链表的表头。
-
-示例:
-输入: 1->2->3->4->5->NULL
-输出: 5->4->3->2->1->NULL
-
-*/
+ 题目描述:
+ 输入一个链表，反转链表后，输出新链表的表头。
+ 
+ 示例:
+ 输入: 1->2->3->4->5->NULL
+ 输出: 5->4->3->2->1->NULL
+ 
+ */
 
 public class ListNode {
     var val: Int
     var next: ListNode?
+    public init() { self.val = 0; self.next = nil; }
     public init(_ val: Int) {
         self.val = val
         self.next = nil
@@ -24,6 +25,7 @@ public class ListNode {
 }
 
 public class Solution {
+    
     /**
      * 方法1： 递归
      * 递归的两个条件:
@@ -55,23 +57,20 @@ public class Solution {
      * pre <- cur 指针依次往后移
      */
     func reverseList2(_ head: ListNode?) -> ListNode? {
-        // 申请两个指针, 指针pre 指向 nil,  指针cur 指向 head
-        var pre: ListNode? = nil
-        var cur: ListNode? = head
-        var tempNode: ListNode? = nil
         // pre 在前,  cur 在后
-        while cur != nil {
-            // 记录一下 cur?.next
-            tempNode = cur?.next
-            // 每次让 cur 的 next 指向 pre, 然后不断遍历 cur。
-            // 每次迭代到 cur，都将 cur 的 next 指向 pre， 然后 pre 和 cur 前进一位
-            cur?.next = pre
-        
-            // pre  <- cur  指针依次往后移一个节点
-            pre = cur
-            cur = tempNode
+        var pre: ListNode? = nil
+        var current = head
+
+        while current != nil {
+            // 记录一下 下一个节点 cur?.next
+            let next = current?.next
+            // 局部反转 pre <- cur
+            current?.next = pre
+
+            // pre 、cur  指针依次往后移一个节点
+            pre = current
+            current = next
         }
-        // 循环结束后，cur为nil， 此时pre即为反转后的头结点
         return pre
     }
 }
@@ -91,7 +90,7 @@ func createList() -> ListNode? {
 }
 
 // test 方法1
-var nextNode : ListNode? = Solution().reverseList1(createList())
+var nextNode = Solution().reverseList2(createList())
 var string = ""
 while nextNode != nil {
     string.append("\(nextNode!.val)->")
@@ -100,7 +99,7 @@ while nextNode != nil {
 print("方法1： 递归 输出：\(string)")
 
 
-// test 方法2
+//// test 方法2
 nextNode = Solution().reverseList2(createList())
 string = ""
 while nextNode != nil {

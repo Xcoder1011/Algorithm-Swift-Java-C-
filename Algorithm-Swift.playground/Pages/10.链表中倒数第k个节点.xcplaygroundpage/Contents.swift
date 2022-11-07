@@ -1,7 +1,4 @@
 
-import Foundation
-
-
 /* 10.链表中倒数第k个节点
  
  题目描述:

@@ -2,22 +2,31 @@
 <playground version='6.0' target-platform='macos'>
     <pages>
         <page name='1.反转链表'/>
-        <page name='2.最长公共前缀'/>
-        <page name='3.最长连续数组'/>
+        <page name='2.反转链表II'/>
+        <page name='3.相交链表'/>
         <page name='4.设计LRU缓存结构'/>
         <page name='5.实现二叉树的前序、中序、后序遍历'/>
-        <page name='6.子数组的最大累计和'/>
+        <page name='6.顺时针打印矩阵 (螺旋矩阵)'/>
         <page name='7.单链表的排序'/>
         <page name='8.合并两个排序的链表'/>
         <page name='9.快速排序'/>
         <page name='10.链表中倒数第k个节点'/>
         <page name='11.数字组合'/>
-        <page name='12.字符变换'/>
-        <page name='13.求和计算'/>
+        <page name='12. 二叉树的锯齿形层序遍历'/>
+        <page name='13. 合并两个有序数组'/>
         <page name='14.IP地址转化'/>
         <page name='15.验证IP地址'/>
         <page name='16.最大子数组和'/>
-        <page name='17.顺时针打印矩阵'/>
+        <page name='17.最大升序子数组和'/>
         <page name='18.用两个栈实现队列'/>
+        <page name='19.两数相加'/>
+        <page name='20.三数之和'/>
+        <page name='21.两数相加'/>
+        <page name='21.判断链表是否有环'/>
+        <page name='22.最长公共前缀'/>
+        <page name='23. 买卖股票的最佳时机'/>
+        <page name='24.买卖股票的最佳时机II'/>
+        <page name='25.无重复字符的最长子串'/>
+        <page name='26.数组中的第K个最大元素'/>
     </pages>
 </playground>

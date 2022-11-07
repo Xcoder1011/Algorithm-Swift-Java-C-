@@ -1,7 +1,4 @@
 
-import Foundation
-
-
 /*
  
  9.数字组合
@@ -56,7 +53,6 @@ import Foundation
 
  
  */
-
 
 public class Solution {
     

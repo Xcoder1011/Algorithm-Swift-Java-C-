@@ -1,6 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
 
 /*
  14.IP地址转化

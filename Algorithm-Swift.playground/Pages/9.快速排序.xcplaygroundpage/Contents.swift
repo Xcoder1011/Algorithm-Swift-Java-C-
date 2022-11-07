@@ -1,7 +1,3 @@
-
-import Foundation
-
-
 /*
  
  9.快速排序
@@ -31,6 +27,7 @@ import Foundation
  所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。
  
  */
+
 
 public class Solution {
     

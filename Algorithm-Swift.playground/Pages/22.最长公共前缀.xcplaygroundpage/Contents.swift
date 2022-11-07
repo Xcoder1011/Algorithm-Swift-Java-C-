@@ -1,5 +1,5 @@
 
-/* 2. 最长公共前缀
+/* 22. 最长公共前缀
  
  题目描述:
  编写一个函数来查找字符串数组中的最长公共前缀。
@@ -11,20 +11,8 @@
  
  输入：["abca","abc","abca","abc","abcc"]
  输出："abc"
+ 
  */
-
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-    public init(_ val: Int, _ next: ListNode?) {
-        self.val = val
-        self.next = next
-    }
-}
 
 class Solution {
     
@@ -43,9 +31,7 @@ class Solution {
         // 最长公共前缀
         var prefixStr = ""
         // 遍历字符
-        for index in 0 ..< shortestLength! {
-            // 每次和任意一个字符串比较， 比如我这里 和 第一个字符串做比较
-            let character = firstString![firstString!.index(firstString!.startIndex, offsetBy: index)]
+        for (index, character) in firstString!.enumerated() {
             var isCommon = true
             // 遍历字符串数组, 因为和第一个字符串做计较，那这里可以跳过和自己本身作比较
             for i in 1 ..< strs.count {
@@ -99,3 +85,4 @@ print("\(strs) 最长公共前缀：\(string)")
 strs = ["a","b","c","d","a"]
 string = Solution().longestCommonPrefix(strs)
 print("\(strs) 最长公共前缀：\(string)")
+
