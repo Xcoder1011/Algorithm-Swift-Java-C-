@@ -86,7 +86,7 @@ public class LRUCache {
         // 删除链表中的最后一个节点, 并返回该节点
         func removeLastNode() -> DlinkNode {
             if size > 0 {
-                if  let lastNode = tail?.prev {
+                if let lastNode = tail?.prev {
                     remove(lastNode)
                     return lastNode
                 }

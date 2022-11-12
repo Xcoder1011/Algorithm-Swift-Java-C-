@@ -36,6 +36,12 @@ public class TreeNode {
         self.left = left
         self.right = right
     }
+    init(_ val: Int) {
+        self.val = val; self.left = nil; self.right = nil
+    }
+    init() {
+        self.val = 0; self.left = nil; self.right = nil
+    }
 }
 
 public class Solution {
@@ -127,11 +133,12 @@ public class Solution {
 
 }
 
-let rootNode1 = TreeNode(1,left: nil,right: nil)
-let rootNode2 = TreeNode(2,left: nil,right: nil)
-let rootNode3 = TreeNode(3,left: nil,right: nil)
+let rootNode1 = TreeNode(1)
+let rootNode2 = TreeNode(2)
+let rootNode3 = TreeNode(3)
 rootNode1.left = rootNode2
 rootNode1.right = rootNode3
 
 let r = Solution().threeOrders(rootNode1)
 print("结果为：\(r)")
+// 结果为：[[1, 2, 3], [2, 1, 3], [2, 3, 1]]

@@ -26,14 +26,12 @@ class Solution {
         guard (k-1) < nums.count else {
             return 0
         }
-        var nums = nums.sorted { a, b in
-            return a > b
-        }
+        var nums = nums.sorted {$0 > $1}
         return nums[k-1]
     }
 }
 
-let length = Solution().findKthLargest([3,2,1,5,6,4], 2)
+let length = Solution().findKthLargest([3,2,3,1,2,4,5,5,6], 4)
 print(length)
 
 

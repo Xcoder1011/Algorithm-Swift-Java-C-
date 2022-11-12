@@ -28,5 +28,7 @@
         <page name='24.买卖股票的最佳时机II'/>
         <page name='25.无重复字符的最长子串'/>
         <page name='26.数组中的第K个最大元素'/>
+        <page name='27.最小覆盖子串'/>
+        <page name='28.对称二叉树'/>
     </pages>
 </playground>
