@@ -30,5 +30,7 @@
         <page name='26.数组中的第K个最大元素'/>
         <page name='27.最小覆盖子串'/>
         <page name='28.对称二叉树'/>
+        <page name='29.三角形最小路径和'/>
+        <page name='30.RingBuffer'/>
     </pages>
 </playground>

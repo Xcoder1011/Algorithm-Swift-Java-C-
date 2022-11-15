@@ -80,7 +80,7 @@ public class LRUCache {
         func remove(_ node: DlinkNode) {
             node.prev?.next = node.next
             node.next?.prev = node.prev
-           size -= 1
+            size -= 1
         }
         
         // 删除链表中的最后一个节点, 并返回该节点
