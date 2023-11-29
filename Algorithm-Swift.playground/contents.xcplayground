@@ -32,5 +32,8 @@
         <page name='28.对称二叉树'/>
         <page name='29.三角形最小路径和'/>
         <page name='30.RingBuffer'/>
+        <page name='31.合并两个有序链表'/>
+        <page name='32.环形链表II'/>
+        <page name='33.前K个高频元素'/>
     </pages>
 </playground>

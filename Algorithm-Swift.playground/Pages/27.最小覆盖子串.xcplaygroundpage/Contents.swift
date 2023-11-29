@@ -46,7 +46,28 @@
 class Solution {
     
     func minWindow(_ s: String, _ t: String) -> String {
-       
+        
+        // 为了方便处理，这里将字符串转成字符数组
+        let sArray = [Character](s)
+        // [字符 : 次数]
+        var windowDict = [Character: Int]()
+        var targetDict = [Character: Int]()
+        
+        for c in t {
+            targetDict[c, default: 0] += 1
+        }
+        // 滑动窗口的两端索引位置
+        var left = 0, right = 0
+        
+        // 记录最小覆盖子串的 索引位置
+        var start = 0, end = 0
+        var minLen = Int.max
+        
+
+        while right < sArray.count {
+            let rChar = sArray[right]
+            right += 1
+        }
         
         var result = ""
         

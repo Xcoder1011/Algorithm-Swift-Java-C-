@@ -23,10 +23,10 @@
 
 class Solution {
     func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
-        guard (k-1) < nums.count else {
+        guard nums.count > 0 && k <= nums.count else {
             return 0
         }
-        var nums = nums.sorted {$0 > $1}
+        var nums = nums.sorted { $0 > $1 }
         return nums[k-1]
     }
 }

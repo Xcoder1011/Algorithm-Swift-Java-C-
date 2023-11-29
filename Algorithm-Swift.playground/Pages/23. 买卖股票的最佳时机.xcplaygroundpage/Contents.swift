@@ -24,20 +24,23 @@
 class Solution {
     
     func maxProfit(_ prices: [Int]) -> Int {
-        
-        var maxProfit = 0
-        var minPrice = Int.max
-        
-        for price in prices {
-            // 记录一个历史最低价格 minPrice
-            minPrice = min(price, minPrice)
-            // 第 i 天卖出股票能得到的利润就是 price - minPrice
-            maxProfit = max(maxProfit, price - minPrice)
+        let count = prices.count
+        if(count < 2) {
+            return 0
         }
-        return maxProfit
+        var profit: Int = 0
+        var minPrice = prices[0]
+        for i in 1 ..< count {
+            let price = prices[i]
+            // 记录一个历史最低价格 minPrice
+            minPrice = min(minPrice, price)
+            // 第 i 天卖出股票能得到的利润就是 price - minPrice
+            profit = max(profit, price - minPrice)
+        }
+        return profit
     }
 }
 
-let maxProfit = Solution().maxProfit([7,1,5,3,6,4])
+let maxProfit = Solution().maxProfit([7,1,5,3,6,4,8])
 print(maxProfit)
 
