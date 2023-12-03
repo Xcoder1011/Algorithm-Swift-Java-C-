@@ -40,7 +40,7 @@ import Foundation
 
 public class Solution {
     
-    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    static func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         var tempArray: [Int] = []
         var p = 0, q = 0
         var curNum = 0
@@ -65,6 +65,10 @@ public class Solution {
     }
 }
 
+var nums1 = [1,2,3,0,0,0]
+let nums2 = [2,5,6]
+Solution.merge(&nums1, 3, nums2, 3)
+print("nums1 = \(nums1)")
 
 
 

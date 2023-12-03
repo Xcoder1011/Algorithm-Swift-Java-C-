@@ -92,7 +92,6 @@ class Solution {
         var fast = head
         var index = 0
         while fast != nil {
-            print("index = \(index), slow : \(slow?.val ?? 0)  fast: \(fast?.val ?? 0)")
             if index < k {
                 fast = fast?.next
             } else {
@@ -101,7 +100,6 @@ class Solution {
             }
             index += 1
         }
-        print("slow : \(slow?.val ?? 0)")
         return slow
     }
 }

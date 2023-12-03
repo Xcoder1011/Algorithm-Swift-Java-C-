@@ -45,7 +45,7 @@
 
 class Solution {
     
-    func minWindow(_ s: String, _ t: String) -> String {
+    static func minWindow(_ s: String, _ t: String) -> String {
         
         // 为了方便处理，这里将字符串转成字符数组
         let sArray = [Character](s)
@@ -58,23 +58,53 @@ class Solution {
         }
         // 滑动窗口的两端索引位置
         var left = 0, right = 0
+        // 匹配次数，等于targetDict的key数量时代表已经匹配完成
+        var matchCount = 0
         
         // 记录最小覆盖子串的 索引位置
         var start = 0, end = 0
+        // 记录最小范围
         var minLen = Int.max
-        
 
         while right < sArray.count {
+            // 开始移动窗口右侧端点
             let rChar = sArray[right]
             right += 1
+            // 右端点字符不是所需字符直接跳过
+            if targetDict[rChar] == nil {
+                continue
+            }
+            windowDict[rChar, default: 0] += 1
+            if windowDict[rChar] == targetDict[rChar] {
+                matchCount += 1
+            }
+            
+            // 如果匹配完成，开始移动窗口左侧断点, 目的是为了寻找当前窗口的最小长度
+            while matchCount == targetDict.count {
+                if right - left < minLen {
+                    start = left
+                    end = right
+                    minLen = right - left
+                }
+                
+                let lChar = sArray[left]
+                left += 1
+                if targetDict[lChar] == nil {
+                    continue
+                }
+                // 如果当前左端字符的窗口中数量和所需数量相等，则后续移动就不满足匹配了，匹配数-1
+                if windowDict[lChar] == targetDict[lChar] {
+                    matchCount -= 1
+                }
+                // 减少窗口字典中对应字符的数量
+                windowDict[lChar]! -= 1
+            }
         }
-        
-        var result = ""
-        
-        return result
-        
+        return minLen == Int.max ? "" : String(sArray[start ..< end])
     }
 }
 
+let ans = Solution.minWindow("ADOBECODEBANC", "ABC");
+print("ans = \(ans)")
 
 

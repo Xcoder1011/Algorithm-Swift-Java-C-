@@ -35,5 +35,6 @@
         <page name='31.合并两个有序链表'/>
         <page name='32.环形链表II'/>
         <page name='33.前K个高频元素'/>
+        <page name='34.无限集中的最小数字'/>
     </pages>
 </playground>

@@ -18,41 +18,57 @@ public class ListNode {
 }
 
 class Solution {
+    
+    /*
+      head --- a --- 入环点 --- b --- 相遇点 ---- c ---  再次回到入换点
+     
+     快慢指针， fast 是 slow 的 2 倍
+     
+     在相遇点时， fast 走过的节点数 == slow 节点数的 2倍
+     
+     a + b + ( b + c) * N = ( a + b ) * 2
+     
+     N代表快指针在环内走了N圈， 令 N = 1, 则有 c = a
+      
+     */
+    
+    
     // 快慢指针
-    static func hasCycle(_ head: ListNode?) -> Bool {
-        if (head == nil || head?.next == nil) {
-            return false
-        }
-        var slow = head
-        var fast = head?.next
+    static func detectCycle(_ head: ListNode?) -> ListNode? {
         
-        while (slow !== fast) {
-            if (fast == nil || fast?.next == nil) {
-                return false
-            }
+        // 定义快慢指针
+        var slow = head
+        var fast = head
+        
+        while fast != nil && fast?.next != nil {
+            
+            // 快指针每次走两步
             slow = slow?.next
             fast = fast?.next?.next
+            
+            // 当快慢指针相遇时
+            while slow == fast {
+                
+                // 当快慢指针相遇时，立即将fast指针指向head
+                fast = head
+                
+                // 当slow指针按照每次走一步的速度，再走c个节点，就会回到入环点
+                while slow != fast {
+                    slow = slow?.next
+                    fast = fast?.next
+                }
+                
+                // 当fast从head走a个节点 到达入环点时， 快慢指针再次相遇
+                // 此时 slow == fast
+                return slow
+            }
         }
-        return true
+        return nil
     }
 }
 
-// 创建测试链表 1->2->3->4->5  返回链表的头节点
-func createList() -> ListNode? {
-    let node1 = ListNode(1)
-    let node2 = ListNode(2)
-    let node3 = ListNode(3)
-    let node4 = ListNode(4)
-    let node5 = ListNode(5)
-    node1.next = node2
-    node2.next = node3
-    node3.next = node4
-    node4.next = node5
-    node5.next = node3
-    return node1
+extension ListNode: Equatable {
+    public static func ==(_ lhs: ListNode, _ rhs: ListNode) -> Bool{
+        return lhs === rhs
+    }
 }
-
-var resultNode = Solution.hasCycle(createList())
-print("判断链表是否有环 输出：\(resultNode)")
-
-

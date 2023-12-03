@@ -38,7 +38,7 @@ public class Solution {
             pre = pre?.next
         }
         
-        // 3. 创建rightNode节点，从pre位置走right-left+1步，移到left左边一个节点的位置
+        // 3. 创建rightNode节点，从pre位置走right-left+1步，移到right左边一个节点的位置
         var rightNode = pre
         for _ in left ... right {
             rightNode = rightNode?.next
