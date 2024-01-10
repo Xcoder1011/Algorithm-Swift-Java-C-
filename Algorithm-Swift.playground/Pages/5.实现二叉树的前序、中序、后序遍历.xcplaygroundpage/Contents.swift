@@ -60,17 +60,7 @@ public class Solution {
         return reslut
     }
     
-    // 前序遍历
-    func preorderTraversal2( _ root: TreeNode?) -> [Int] {
-        var result: [Int] = []
-        if let node = root {
-            result.append(node.val);
-            result += preorderTraversal(node.left)
-            result += preorderTraversal(node.right)
-        }
-        return result
-    }
-    
+ 
     // 前序遍历
     func preorderTraversal(_ root: TreeNode?) -> [Int] {
         guard let root = root else {

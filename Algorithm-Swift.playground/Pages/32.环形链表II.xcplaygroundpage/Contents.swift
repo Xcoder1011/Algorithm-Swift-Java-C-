@@ -20,7 +20,7 @@ public class ListNode {
 class Solution {
     
     /*
-      head --- a --- 入环点 --- b --- 相遇点 ---- c ---  再次回到入换点
+      head --- a --- 入环点 --- b --- 相遇点 ---- c ---  再次回到入环点
      
      快慢指针， fast 是 slow 的 2 倍
      
