@@ -36,5 +36,7 @@
         <page name='32.环形链表II'/>
         <page name='33.前K个高频元素'/>
         <page name='34.无限集中的最小数字'/>
+        <page name='35.有效的括号'/>
+        <page name='36.杨辉三角'/>
     </pages>
 </playground>

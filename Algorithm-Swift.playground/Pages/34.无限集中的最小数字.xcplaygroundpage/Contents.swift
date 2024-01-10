@@ -65,3 +65,27 @@ set.addBack(3)
 minNum = set.popSmallest()
 print("minNum2 = \(minNum)")
 
+class Solution3 {
+    func isValid(_ s: String) -> Bool {
+        var stack = [String.Element]()
+        for ch in s {
+            switch ch {
+            case "[":
+                stack.append("]")
+            case "{":
+                stack.append("}")
+            case "(":
+                stack.append(")")
+            default:
+                let lastChar = stack.last
+                if ch == lastChar {
+                    stack.removeLast()
+                } else {
+                    return false
+                }
+            }
+        }
+        return stack.isEmpty
+    }
+}
+
